@@ -1,6 +1,6 @@
-AZ_LINUX_VM Module
+# AZ_LINUX_VM Module
 An Azure terraform module to setup a Linux VM in azure.
-    It Includes the following resources:
+## It Includes the following resources:
       -  A Resource-Group
       -  One or more Linux VMs (based on the numberOfRes variable)
       -  A Virtual Network
@@ -11,7 +11,7 @@ An Azure terraform module to setup a Linux VM in azure.
       -  Runs a custom script or a set of commands into the machines as a BOOTSTRAP process
       - Generates a local SSH key into the current directory with the name of the variable "NAME", this is used to connect into the vms
 
-Module Input Variables
+## Module Input Variables
     name        = The Name of your Deployment / Project
     userName    = User name to be used into the machines
     numberOfRes = Number of VMs that you need to setup
@@ -25,7 +25,7 @@ Module Input Variables
       "environment" = "SAMPLE"
     }
 
-Usage
+## Usage
     module "az_linux_vm" {
         source      = "../modules/az_linux_vm"
         name        = "NAME"
@@ -41,11 +41,11 @@ Usage
         script      = "curl -fsSL https://get.docker.com -o get-docker.sh && sh get-docker.sh && sudo usermod -aG docker daniel"
     }
 
-Outputs
+## Outputs
     rg_name      = The name of your Resource Group
     vm_data      = All data about your VMS
     vnet_data    = All data about the Vnet
     subenet_data = All data about te subnet
 
-Authors
-    https://github.com/dnlouko
+## Authors
+https://github.com/dnlouko
