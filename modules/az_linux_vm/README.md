@@ -27,7 +27,7 @@ An Azure terraform module to setup a Linux VM in azure.
 
 ## Usage
     module "az_linux_vm" {
-        source      = "../modules/az_linux_vm"
+        source      = "github.com/dnlouko/Terraform/modules//az_linux_vm"
         name        = "NAME"
         userName    = "USERNAME"
         numberOfRes = NUMBER
